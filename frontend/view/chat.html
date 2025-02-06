@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Welcome, <span id="username-display"></span></h2>
+        <select id="room-select">
+            <option value="devops">DevOps</option>
+            <option value="cloud-computing">Cloud Computing</option>
+            <option value="covid19">Covid19</option>
+            <option value="sports">Sports</option>
+            <option value="nodejs">NodeJS</option>
+        </select>
+        <button id="join-room">Join Room</button>
+        <button id="leave-room">Leave Room</button>
+
+        <div class="chat-box">
+            <div id="messages"></div>
+            <p id="typing-indicator"></p>
+            <input type="text" id="message-input" placeholder="Type a message..." />
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+
+    <script src="../js/chat.js"></script>
+</body>
+</html>
